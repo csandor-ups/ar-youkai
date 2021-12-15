@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AR Yōkai</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="AR Yōukai" />
+	<meta name="keywords" content="Augmented Reality, Youkai, Yōukai, Game, Storytelling, Movie" />
+	<meta name="author" content="Damien Constantine Rompapas" />
+
+  <!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="AR Yōkai "/>
+	<meta property="og:url" content="imd.naist.jp"/>
+	<meta property="og:description" content="A Situated Augmented Reality Ghost Story"/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Webfonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="gridism.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+
+	<![endif]-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108276906-1"></script>
+	<script>
+	 window.dataLayer = window.dataLayer || [];
+	 function gtag(){dataLayer.push(arguments);}
+	 gtag('js', new Date());
+
+	 gtag('config', 'UA-108276906-1');
+	</script>
+
+	</head>
+	<body>
+    <script id="bleh">
+    
+    $(document).ready(function(){
+    console.log("bleh");
+//    setTimeout(scrollToElement(), 3000)"
+//    scrollToElement("VideoScroll3");
+//    scrollToElement("VideoScroll2");
+    
+    });
+    </script>
+    
+    <script type="text/javascript">
+    function scrollToElement(element) {
+    var el = document.getElementById(element);
+    var yPos = el.getClientRects()[0].top;
+    var yScroll = window.scrollY;
+    var interval = setInterval(function() {
+    yScroll += 10;
+    window.scroll(0, yScroll);
+    if (el.getClientRects()[0].top <= 0) {
+    clearInterval(interval);
+    }
+    }, 5);
+    }
+
+    console.log("Preparing");
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    console.log('script loaded');
+    
+    function onYouTubeIframeAPIReady() {
+    console.log('IframeAPI = Ready');
+    var player = new YT.Player('VideoScroll1', {
+    events: {
+    'onReady': onPlayerReady,
+    'onStateChange': onPlayerStateChange
+    }
+    });
+    }
+    
+    function onPlayerReady(event) {
+    console.log("onPlayerReady");
+    }
+    
+    function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PAUSED) {
+    console.log("Paused");
+    }
+    
+    if (event.data == YT.PlayerState.PLAYING) {
+    console.log("Playing");
+    }
+    
+    if (event.data == YT.PlayerState.ENDED) {
+        scrollToElement("VideoScroll2");
+    end();
+
+    }
+    }
+    </script>
+	<div id="fh5co-main" >
+
+		<div id="fh5co-portfolio">
+<!--        <div class="grid animate-box">
+        <div class="unit whole">
+        <div class="fh5co-intro text-center" style="background-image: url(images/background_teaser2.png); background-position:center; background-repeat: no-repeat; opacity:1.0;">
+        <div class="container">
+        <div class="row" syle="opacity:1.0">
+        <div class="col-md-8 col-md-offset-2">
+        <h1 class="intro-lead">AR Yōkai</h1>
+        <h2 class="intro-lead-sub">A Situated Augmented Reality Ghost Story</h2>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>-->
+			<div class="grid animate-box">
+                <div class="unit whole" >
+                    <div class="video-container">
+                        <iframe id="VideoScroll1" src="https://www.youtube.com/embed/sE8V2RdES4A?rel=0&amp;showinfo=0&amp;enablejsapi=1;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div><!-- https://upload.wikimedia.org/wikipedia/commons/8/8f/Shunkosai_Hokuei_Obake.jpg -->
+            </div>
+        <div class="grid animate-box">
+	      <div class="unit half" id="VideoScroll2">
+          <div class="video-container" >
+            <iframe src="https://www.youtube.com/embed/j3Qq320tnTI?rel=0&amp;showinfo=0&amp;enablejsapi=1;" frameborder="0" allowfullscreen></iframe>
+          </div>
+	      </div>
+	      <div class="unit half">
+					<p style="font-size: 20px; line-height: 36px;">
+							本プロジェクトは、日本の妖怪をテーマにした拡張現実感のコンテンツです。このコンテンツでは、京都・花園にある春光院を舞台に、拡張現実感で表現された妖怪たちが織りなすストーリー体験を提供します。
+				  </p>
+	      </div>
+	    </div>
+        <div class="grid animate-box">
+            <div class="unit one-quarter">
+<img width="100%" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Shunkosai_Hokuei_Obake.jpg" alt="Free HTML5 Template by FREEHTML5.co">
+            </div>
+            <div class="unit one-quarter">
+            <p style="font-size: 20px; line-height: 36px; vertical-align:top;">
+            左：葛飾北斎 百物語-お岩さん 1830
+            </p>
+            <p style="font-size: 20px; line-height: 36px;">
+            右：春光院（京都府）
+            </p>
+            </div>
+            <div class="unit half" style="">
+                <img width="90%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Myoshinj_shunkoin02s2000.jpg/800px-Myoshinj_shunkoin02s2000.jpg" alt="Free HTML5 Template by FREEHTML5.co" style="float:right;">
+            </div>
+        </div>
+        <div class="grid animate-box">
+        <div class="unit whole" id="VideoScroll3">
+            <div class="unit half">
+					<p style="font-size: 20px; line-height: 36px;">
+						我々は、かねてより、特定の場所や施設を基準にしたストーリーテリングについての可能性を探って来ました。今回我々は、京都に位置する春光院を舞台に、開発したコンテンツによるストーリーテリングを実施しました。ユーザーはヘッドマウント型のディスプレイを身に着けて寺院を探索するさなか、様々な妖怪たちと出会い、ストーリーを体験します。最上部の動画では、その際にリアルタイムでキャプチャされたユーザーの視点をご覧いただくことができます。また、その他の動画では、妖怪モデルやストーリーの制作、春光院内部の3Dマップ化やコンテンツのセッティング等のメイキング映像を見ることができます。
+				  </p>
+	      </div>
+	      <div class="unit half">
+          <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/nY3Pq5rGo1M?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+	      </div>
+        </div<
+	    </div>
+			<div class="grid">
+				<div class="unit whole animate-box">
+					<div>
+						<p style="font-size: 20px; line-height: 36px;">貢献: 我々のプロジェクトにおける最大の特徴は、現在主流となっているTVやスマートフォンなどを使ったストーリーテリングではなく、実際に現実世界でストーリーを体験できるという部分です。本プロジェクトは、魅力的な場所や土地の力を使ってストーリーをより強力なものにする試みであり、新しい拡張現実感の体験を通じて、物語の持つ力を最大限に引き出すことを目標にしています。</p>
+					</div>
+				</div>
+			</div>
+			<div class="grid animate-box">
+                <div class="unit whole">
+                    <div class="row">
+                    <h2 class="section-lead text-center">アンケート</h2>
+                    </div>
+					<div class="unit whole">
+						<p style="font-size: 20px; line-height: 36px;">本プロジェクトをより発展させていくために、映画やTVドラマ、アニメーション等、ストーリーテリングに関わる仕事をしている方を対象にアンケートを実施しています。動画やコンテンツ等に対する忌憚ないご意見をお聞かせ願えればと思います。</p>
+					</div>
+                    <div class="row">
+		            <h2 class="section-lead text-center"><a href="https://goo.gl/forms/qaBfG8QUctC6vWCg2">アンケートへのリンク</a></h2>
+                    </div>					
+                <div>
+            </div>
+            <div class="grid animate-box">
+                <div class="unit whole">
+                    <div class="row">
+                    <h2 class="section-lead text-center">Photo Gallery</h2>
+                    </div>
+                <div>
+            </div>
+            <div class="grid animate-box">
+                <div class="unit whole">
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/1.png" target="_blank">
+                    <img width="96.5%" src="images/thumbnails/1.png">
+                    </a>
+                    </div>
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/2.png" target="_blank">
+                    <img width="100%" src="images/thumbnails/2.png" >
+                    </a>
+                    </div>
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/3.png" target="_blank">
+                    <img width="100%" src="images/thumbnails/3.png" >
+                    </a>
+                    </div>
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/4.png" target="_blank">
+                    <img width="96.5%" src="images/thumbnails/4.png" >
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid animate-box">
+                <div class="unit whole">
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/5.png" target="_blank">
+                        <img width="96.5%" src="images/thumbnails/5.png">
+                    </a>
+                    </div>
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/6.png" target="_blank">
+                        <img width="100%" src="images/thumbnails/6.png" >
+                        </a>
+                    </div>
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/7.png" target="_blank">
+                        <img width="100%" src="images/thumbnails/7.png" >
+                        </a>
+                    </div>
+                    <div class="unit one-quarter">
+                    <a href="http://imd.naist.jp/~damien-r/aryoukai/images/screenshots/8.png" target="_blank">
+                        <img width="96.5%" src="images/thumbnails/8.png" >
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="fh5co-team">
+            <div class="grid">
+            <div class="unit whole">
+            <div class="row">
+            <h2 class="section-lead text-center">Team</h2>
+            
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/inamitsu.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Yuto Inamitsu</h3>
+            <p>Director &
+            3D Asset Design</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/chris.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Christian Sandor</h3>
+            <p>Advisor</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/damien.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Damien Rompapas</h3>
+            <p>Hololens Development</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/Daniel-Saakes.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Daniel Saakes</h3>
+            <p>Advisor</p>
+            </div>
+            
+            </div>
+            </div>
+            </div>
+            </div>
+            <div id="fh5co-team">
+            <div class="grid">
+            <div class="unit whole">
+            
+            <div class="row">
+            <h2 class="section-lead text-center">Special Thanks</h2>
+            
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/amanda.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Amanda Kuwahara</h3>
+            <p>Actress</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240" height="296" src="images/indah.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Indah Wijayanti</h3>
+            <p>Actress</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240" height="296" src="images/mori.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Ryosuke Mori</h3>
+            <p>Lighting</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240" height="296" src="images/table_1.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Table 1</h3>
+            <p>Music</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240" height="296" src="images/shw.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+
+            <h3>SHW</h3>
+            <p>Music</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240" height="296" src="images/hmix_net.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Hirokazu Akiyama</h3>
+            <p>Music</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/taketomi.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Takafumi Taketomi</h3>
+            <p>Advisor</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/plopski.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Alexander Plopski</h3>
+            <p>Advisor</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/hirokazu.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Hirokazu Kato</h3>
+            <p>Advisor</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/alvaro.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>Alvaro Cassinelli</h3>
+            <p>Advisor</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
+            <figure>
+            <img width="240px" height="296px" src="images/zenlogo5.gif" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+            </figure>
+            <h3>
+            <a href="http://www.shunkoin.com">Shunkoin Temple, Kyoto</a> </h3>
+            <p>Movie Location</p>
+            </div>
+
+            </div>
+            </div>
+            </div>
+            
+            </div>
+            <div id="fh5co-team">
+            <div class="container">
+            <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            
+            
+            <div class="grid">
+            <div class="unit whole">
+            <div style="float:center; display:inline-block; display:flex;  justify-content: center; text-align:center;  vertical-align:middle;">
+            <h2>    Interactive Media Design Lab, 2017 <a href="http://imd.naist.jp">imd.naist.jp</a></h2>
+            </div>
+            </div>
+            
+            
+            <div class="grid">
+                <div class="unit whole">
+                <div style="position: relative;
+                left: 0px; float: left; display:inline-block; width:20%;">
+                        <img src="images/imdlab.png" style="width:100%">
+                    </div>
+                    <div style="float: right; display:inline-block; width:10%;">
+                        <img src="images/naist.png" style="width:100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+
+	</body>
+</html>
